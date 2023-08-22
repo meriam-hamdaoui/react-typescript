@@ -24,6 +24,7 @@ import { CounterClass } from "./components/class/CounterClass";
 import Private from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
 import { List } from "./components/generic/List";
+import { RandomNumber } from "./components/restriction/RandomNumber";
 
 function App() {
   const personName = {
@@ -88,12 +89,12 @@ function App() {
       <Private isLoggedIn={true} component={Profile} />
       <br />*/}
 
-      {/*************** generic props ***************/}
-      {/* <List
+      {/*************** generic props ***************
+       <List
         items={["xxx", "yyy", "zzz"]}
         onClick={(item) => console.log(item)}
       />
-      <List items={[1, 2, 3]} onClick={(item) => console.log(item)} /> */}
+      <List items={[1, 2, 3]} onClick={(item) => console.log(item)} /> 
       <List
         items={[
           { id: 1, text: "xxx" },
@@ -101,7 +102,10 @@ function App() {
           { id: 3, text: "zzz" },
         ]}
         onClick={(item) => console.log(item)}
-      />
+      />*/}
+
+      {/* restriction props */}
+      <RandomNumber value={5} isPositive />
     </div>
   );
 }
