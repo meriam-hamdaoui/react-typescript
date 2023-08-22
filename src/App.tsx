@@ -21,6 +21,8 @@ import { UserC } from "./components/context/UserC"; // user context
 import DomRef from "./components/refs/DomRef";
 import MutableRef from "./components/refs/MutableRef";
 import { CounterClass } from "./components/class/CounterClass";
+import Private from "./components/auth/Private";
+import Profile from "./components/auth/Profile";
 
 function App() {
   const personName = {
@@ -90,6 +92,8 @@ function App() {
       <br />
       <br />
       <br />
+      {/********** a component as a props **********/}
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   );
 }
