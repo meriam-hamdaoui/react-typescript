@@ -4,7 +4,7 @@ type UserType = {
   name: string;
   email: string;
 };
-export default function User() {
+export default function UserS() {
   const [user, setUser] = useState<UserType | null>(null);
   /* asertion type: the developer is sure that the user will never be null
   in this case we don't need to initialise it to null

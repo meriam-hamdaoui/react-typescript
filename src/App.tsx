@@ -12,10 +12,12 @@ import { Button } from "./components/propsType/event-props/Button";
 import { Input } from "./components/propsType/event-props/Input";
 import { Container } from "./components/propsType/Container";
 import LoggedIn from "./components/state-reducer/LoggedIn";
-import User from "./components/state-reducer/User";
+// import UserS from "./components/state-reducer/UserS"; // user state
 import Counter from "./components/state-reducer/Counter";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import Box from "./components/context/Box";
+import UserContextProvider from "./components/context/UserContext";
+import { UserC } from "./components/context/UserC"; // user context
 
 function App() {
   const personName = {
@@ -57,17 +59,21 @@ function App() {
       {/*  states
 
       <LoggedIn />
-      <User />
+      <UserS />
       <Counter />
        */}
 
       {/* 
           react context
-         */}
 
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
+      */}
+
+      <UserContextProvider>
+        <UserC />
+      </UserContextProvider>
     </div>
   );
 }
