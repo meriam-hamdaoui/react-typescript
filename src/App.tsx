@@ -14,6 +14,8 @@ import { Container } from "./components/propsType/Container";
 import LoggedIn from "./components/state-reducer/LoggedIn";
 import User from "./components/state-reducer/User";
 import Counter from "./components/state-reducer/Counter";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
+import Box from "./components/context/Box";
 
 function App() {
   const personName = {
@@ -56,8 +58,16 @@ function App() {
 
       <LoggedIn />
       <User />
-       */}
       <Counter />
+       */}
+
+      {/* 
+          react context
+         */}
+
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
