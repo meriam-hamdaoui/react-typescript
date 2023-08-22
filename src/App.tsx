@@ -12,7 +12,7 @@ import { Button } from "./components/propsType/event-props/Button";
 import { Input } from "./components/propsType/event-props/Input";
 import { Container } from "./components/propsType/Container";
 import LoggedIn from "./components/state-reducer/LoggedIn";
-// import UserS from "./components/state-reducer/UserS"; // user state
+import UserS from "./components/state-reducer/UserS"; // user state
 import Counter from "./components/state-reducer/Counter";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import Box from "./components/context/Box";
@@ -20,6 +20,7 @@ import UserContextProvider from "./components/context/UserContext";
 import { UserC } from "./components/context/UserC"; // user context
 import DomRef from "./components/refs/DomRef";
 import MutableRef from "./components/refs/MutableRef";
+import { CounterClass } from "./components/class/CounterClass";
 
 function App() {
   const personName = {
@@ -29,58 +30,66 @@ function App() {
 
   return (
     <div className="App">
-      {/* 
-        General props
-        <Greet name="Maya" messages={10} isLoggedIn={true} />
-        <Person name={personName} />
-        <PersonList names={nameList} />
-        <Status status="loading" />
-      */}
+      {/************** General props **************/}
+      <Greet name="Maya" messages={10} isLoggedIn={true} />
+      <Person name={personName} />
+      <PersonList names={nameList} />
+      <Status status="loading" />
 
-      {/* 
-        Children props
-        <Heading>this is a children props type string</Heading>     
-        <Oscar>
-         <Heading>The oscar goes to Leonardo Dicaprio</Heading>
-        </Oscar>
-      */}
-
-      {/* 
-        Event Props
-        <Button
-          handleClick={(event, id) =>
+      <br />
+      <br />
+      <br />
+      {/*************  Children props*************/}
+      <Heading>this is a children props type string</Heading>
+      <Oscar>
+        <Heading>The oscar goes to Leonardo Dicaprio</Heading>
+      </Oscar>
+      <br />
+      <br />
+      <br />
+      {/*************** Event Props***************/}
+      <Button
+        handleClick={(event, id) =>
           alert(`event type is ${event.type} with id ${id}`)
-          }
-        />
-        <Input handleChange={(e) => console.log(e?.target?.value)} />
-      */}
-      {/* 
-        styling props
-        <Container styles={styleCSS} />
-       */}
-      {/*  states
-
+        }
+      />
+      <Input handleChange={(e) => console.log(e?.target?.value)} />
+      <br />
+      <br />
+      <br />
+      {/**************  styling props**************/}
+      <Container styles={styleCSS} />
+      <br />
+      <br />
+      <br />
+      {/******************  states******************/}
       <LoggedIn />
       <UserS />
       <Counter />
-       */}
-
-      {/* 
-          react context
-
+      <br />
+      <br />
+      <br />
+      {/***************  react context***************/}
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
-
       <UserContextProvider>
         <UserC />
       </UserContextProvider>
-      */}
-      {/* 
-      useRef react
+      <br />
+      <br />
+      <br />
+      {/****************  useRef react****************/}
       <DomRef />
-       */}
       <MutableRef />
+      <br />
+      <br />
+      <br />
+      {/**************class component **************/}
+      <CounterClass message="The count value is 5" />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
