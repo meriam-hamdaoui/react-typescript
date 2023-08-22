@@ -23,6 +23,7 @@ import MutableRef from "./components/refs/MutableRef";
 import { CounterClass } from "./components/class/CounterClass";
 import Private from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
+import { List } from "./components/generic/List";
 
 function App() {
   const personName = {
@@ -32,68 +33,75 @@ function App() {
 
   return (
     <div className="App">
-      {/************** General props **************/}
+      {/************** General props *************
       <Greet name="Maya" messages={10} isLoggedIn={true} />
       <Person name={personName} />
       <PersonList names={nameList} />
       <Status status="loading" />
+      <br />*/}
 
-      <br />
-      <br />
-      <br />
-      {/*************  Children props*************/}
+      {/*************  Children props************
       <Heading>this is a children props type string</Heading>
       <Oscar>
         <Heading>The oscar goes to Leonardo Dicaprio</Heading>
       </Oscar>
-      <br />
-      <br />
-      <br />
-      {/*************** Event Props***************/}
+      <br />*/}
+
+      {/*************** Event Props**************
       <Button
         handleClick={(event, id) =>
           alert(`event type is ${event.type} with id ${id}`)
         }
       />
       <Input handleChange={(e) => console.log(e?.target?.value)} />
-      <br />
-      <br />
-      <br />
-      {/**************  styling props**************/}
+      <br />*/}
+
+      {/**************  styling props*************
       <Container styles={styleCSS} />
-      <br />
-      <br />
-      <br />
-      {/******************  states******************/}
+      <br />*/}
+
+      {/******************  states*****************
       <LoggedIn />
       <UserS />
       <Counter />
-      <br />
-      <br />
-      <br />
-      {/***************  react context***************/}
+      <br />*/}
+
+      {/***************  react context**************
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
       <UserContextProvider>
         <UserC />
       </UserContextProvider>
-      <br />
-      <br />
-      <br />
-      {/****************  useRef react****************/}
+      <br />*/}
+
+      {/****************  useRef react***************
       <DomRef />
       <MutableRef />
-      <br />
-      <br />
-      <br />
-      {/**************class component **************/}
+      <br />*/}
+
+      {/**************class component *************
       <CounterClass message="The count value is 5" />
-      <br />
-      <br />
-      <br />
-      {/********** a component as a props **********/}
+      <br />*/}
+
+      {/********** a component as a props **********
       <Private isLoggedIn={true} component={Profile} />
+      <br />*/}
+
+      {/*************** generic props ***************/}
+      {/* <List
+        items={["xxx", "yyy", "zzz"]}
+        onClick={(item) => console.log(item)}
+      />
+      <List items={[1, 2, 3]} onClick={(item) => console.log(item)} /> */}
+      <List
+        items={[
+          { id: 1, text: "xxx" },
+          { id: 2, text: "yyy" },
+          { id: 3, text: "zzz" },
+        ]}
+        onClick={(item) => console.log(item)}
+      />
     </div>
   );
 }
