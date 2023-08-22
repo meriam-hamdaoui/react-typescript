@@ -18,6 +18,8 @@ import { ThemeContextProvider } from "./components/context/ThemeContext";
 import Box from "./components/context/Box";
 import UserContextProvider from "./components/context/UserContext";
 import { UserC } from "./components/context/UserC"; // user context
+import DomRef from "./components/refs/DomRef";
+import MutableRef from "./components/refs/MutableRef";
 
 function App() {
   const personName = {
@@ -69,11 +71,16 @@ function App() {
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
-      */}
 
       <UserContextProvider>
         <UserC />
       </UserContextProvider>
+      */}
+      {/* 
+      useRef react
+      <DomRef />
+       */}
+      <MutableRef />
     </div>
   );
 }
