@@ -25,6 +25,7 @@ import Private from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
 import { List } from "./components/generic/List";
 import { RandomNumber } from "./components/restriction/RandomNumber";
+import { Toast } from "./components/templateLiterals/Toast";
 
 function App() {
   const personName = {
@@ -104,8 +105,11 @@ function App() {
         onClick={(item) => console.log(item)}
       />*/}
 
-      {/* restriction props */}
-      <RandomNumber value={5} isPositive />
+      {/****************** restriction props *****************
+      <RandomNumber value={5} isPositive />*/}
+
+      {/* template literal  */}
+      <Toast position={"center-bottom"} />
     </div>
   );
 }
