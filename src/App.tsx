@@ -26,6 +26,8 @@ import Profile from "./components/auth/Profile";
 import { List } from "./components/generic/List";
 import { RandomNumber } from "./components/restriction/RandomNumber";
 import { Toast } from "./components/templateLiterals/Toast";
+import { CustomButton } from "./components/html/ButtonHTML";
+import { CustomInput } from "./components/html/InputHTML";
 
 function App() {
   const personName = {
@@ -108,8 +110,14 @@ function App() {
       {/****************** restriction props *****************
       <RandomNumber value={5} isPositive />*/}
 
-      {/* template literal  */}
-      <Toast position={"center-bottom"} />
+      {/***************** template literal  ****************
+      <Toast position={"center-bottom"} />*/}
+
+      {/*  wrappe html element, when we need to customize an html element */}
+      <CustomButton variant="primary" onClick={() => alert("button clicked")}>
+        click me
+      </CustomButton>
+      <CustomInput />
     </div>
   );
 }
