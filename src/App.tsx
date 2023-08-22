@@ -113,11 +113,11 @@ function App() {
       {/***************** template literal  ****************
       <Toast position={"center-bottom"} />*/}
 
-      {/*  wrappe html element, when we need to customize an html element */}
+      {/*  wrappe html element, when we need to customize an html element 
       <CustomButton variant="primary" onClick={() => alert("button clicked")}>
         click me
       </CustomButton>
-      <CustomInput />
+      <CustomInput />*/}
     </div>
   );
 }
