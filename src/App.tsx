@@ -28,6 +28,7 @@ import { RandomNumber } from "./components/restriction/RandomNumber";
 import { Toast } from "./components/templateLiterals/Toast";
 import { CustomButton } from "./components/html/ButtonHTML";
 import { CustomInput } from "./components/html/InputHTML";
+import { Text } from "./components/polymorphic/Text";
 
 function App() {
   const personName = {
@@ -118,6 +119,17 @@ function App() {
         click me
       </CustomButton>
       <CustomInput />*/}
+
+      {/******************* polymorphic *******************/}
+      <Text as="h1" size="lg">
+        Heading
+      </Text>
+      <Text as="p" size="md">
+        Paragraph
+      </Text>
+      <Text as="label" htmlFor="labelId" size="sm" color="secondary">
+        Label
+      </Text>
     </div>
   );
 }
